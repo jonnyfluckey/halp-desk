@@ -19,7 +19,7 @@ exports.submitTicket = (req, res) => {
   });
 };
 
-exports.getOpenTicket = (req, res) => {
+exports.getOpenTickets = (req, res) => {
   const openTickets = [];
   const query = client.query('SELECT * FROM tickets WHERE archive = false');
   query.on('row', (row) => {
@@ -45,7 +45,7 @@ exports.updateTicket = (req, res) => {
   console.log(req.body);
   const results = [];
   const id = req.body.id;
-  const ticket = Object.assign({}, req.body, { archive: !req.body.archive });
+  const ticket = Object.assign({}, req.body, { archive: !req.body.archive })
   const query = client.query('UPDATE tickets SET archive = $1 WHERE id = $2', [ticket.archive, id]);
   query.on('row', (row) => {
     results.push(row);
@@ -64,4 +64,4 @@ exports.deleteTicket = (req, res) => {
   query.on('end', () => {
     return res.json(results);
   });
-}
+};
