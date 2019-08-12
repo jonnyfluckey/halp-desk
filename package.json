@@ -1,0 +1,25 @@
+{
+  "name": "halp-desk",
+  "version": "1.0.0",
+  "description": "\"A help desk application for peer-to-peer support\"",
+  "main": "client/app.js",
+  "scripts": {
+    "test": "echo \"error: no test specified\" && exit 1",
+    "start": "node client/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonnyfluckey/halp-desk.git"
+  },
+  "author": "Jonny Fluckey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bower": "^1.8.8",
+    "express": "^4.17.1",
+    "pg": "^7.12.1"
+  },
+  "engines": {
+    "node": "6.2.0"
+  }
+}
