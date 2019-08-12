@@ -1,11 +1,11 @@
 {
   "name": "halp-desk",
   "version": "1.0.0",
-  "description": "\"A help desk application for peer-to-peer support\"",
+  "description": "A help desk application for peer-to-peer support",
   "main": "client/app.js",
   "scripts": {
     "test": "echo \"error: no test specified\" && exit 1",
-    "start": "node client/server/server.js"
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
